@@ -1,0 +1,44 @@
+:root {
+  --background: #dcdcdc; /* Light theme background */
+  --secondary-bg: #a9a9a9; /* Secondary elements */
+  --text: #555555; /* Text color */
+  --accent: #808080; /* Accents or hover states */
+  --button-bg: #dcdcdc; /* Button background */
+  --button-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.7); /* Neumorphic shadows */
+  --button-hover-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
+}
+
+[data-theme="dark"] {
+  --background: #555555; /* Dark theme background */
+  --secondary-bg: #a9a9a9; /* Secondary elements */
+  --text: #dcdcdc; /* Text color */
+  --accent: #808080; /* Accents or hover states */
+  --button-bg: #555555; /* Button background */
+  --button-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(128, 128, 128, 0.3);
+  --button-hover-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(128, 128, 128, 0.3);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--accent);
+}
