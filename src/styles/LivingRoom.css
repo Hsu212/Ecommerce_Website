@@ -1,0 +1,18 @@
+.living-room {
+  text-align: center;
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.living-room h1 {
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}

@@ -1,0 +1,35 @@
+.cart {
+  text-align: center;
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart button {
+  background: var(--button-bg);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: var(--button-shadow);
+  color: var(--text);
+  font-weight: 500;
+  transition: box-shadow 0.3s;
+}
+
+.cart button:hover {
+  box-shadow: var(--button-hover-shadow);
+}
