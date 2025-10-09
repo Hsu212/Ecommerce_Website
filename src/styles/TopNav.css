@@ -15,6 +15,13 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: var(--accent);
+  cursor: pointer;
 }
 
 .search-bar-container {
