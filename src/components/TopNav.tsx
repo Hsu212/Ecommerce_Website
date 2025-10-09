@@ -14,7 +14,9 @@ interface TopNavProps {
 const TopNav: React.FC<TopNavProps> = ({ cartCount, toggleTheme, theme, isScrolled }) => {
   return (
     <div className="top-nav">
-      <div className="logo">Furniture Store</div>
+      <Link to="/" className="logo">
+        Furniture Store
+      </Link>
       <div className={`search-bar-container ${isScrolled ? 'visible' : 'hidden'}`}>
         {isScrolled && <SearchBar />}
       </div>
