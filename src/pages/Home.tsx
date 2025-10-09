@@ -30,14 +30,12 @@ const Home: React.FC = () => {
         <p>Discover stylish, high-quality furniture to transform your home. From modern sofas to elegant dining tables, we have everything to create your dream space.</p>
       </section>
       <Slider {...settings} className="home-carousel">
-        {slides.map((slide, index) => (
+        {slides.map((slide) => (
           <div key={slide.id} className="carousel-slide">
             <img src={slide.image} alt={slide.alt} className="carousel-image" />
-            {index === 0 && (
-              <Link to="/products" className="shop-now-button">
-                Shop Now
-              </Link>
-            )}
+            <Link to="/products" className="shop-now-button">
+              Shop Now
+            </Link>
           </div>
         ))}
       </Slider>
