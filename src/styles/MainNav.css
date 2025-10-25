@@ -1,10 +1,10 @@
 .main-nav {
-  background: var(--main-nav-bg); /* Glassmorphic background only */
-  padding: 12px 20px;
-  backdrop-filter: blur(10px); /* Frosted glass effect */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  border: 1px solid rgba(128, 128, 128, 0.2); /* Subtle border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  background: transparent;
+  padding: 10px 20px;
+  backdrop-filter: blur(15px) saturate(1.2); /* Stronger glassmorphic effect */
+  -webkit-backdrop-filter: blur(15px) saturate(1.2); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* More transparent border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
   border-radius: 10px;
 }
 
@@ -18,48 +18,32 @@
 }
 
 .main-nav ul li a {
-  color: var(--main-nav-text); /* Use theme-specific text color */
+  color: var(--main-nav-text);
   font-weight: 500;
   text-decoration: none;
   padding: 8px 16px;
   border-radius: 8px;
   transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability */
 }
 
 .main-nav ul li a:hover {
-  background-color: rgba(128, 128, 128, 0.1); /* Subtle hover background */
+  background-color: rgba(128, 128, 128, 0.1);
   color: var(--main-nav-hover-text);
 }
 
 .main-nav ul li a:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 2px var(--accent); /* Accessible focus indicator */
+  outline: none;
+  box-shadow: 0 0 0 2px var(--accent);
 }
 
 /* Theme-specific styles */
 :root {
-  --main-nav-bg: rgba(230, 223, 223, 0.3); /* Light theme: #dcdcdc-based */
   --main-nav-text: #333333; /* Darker text for light mode */
-  --main-nav-hover-text: #fcf9f9; /* Matches your custom hover */
+  --main-nav-hover-text: #fcf9f9;
 }
 
 [data-theme="dark"] {
-  --main-nav-bg: rgba(59, 58, 58, 0.2); /* Dark theme: #555555-based */
   --main-nav-text: #f1efef; /* Matches dark mode text */
-  --main-nav-hover-text: #1c1b1b; /* Matches your custom hover */
-}
-
-/* Fallback for browsers without backdrop-filter support */
-@supports not (backdrop-filter: blur(10px)) {
-  .main-nav {
-    background: var(--main-nav-bg-fallback);
-  }
-
-  :root {
-    --main-nav-bg-fallback: rgba(183, 178, 178, 0.5); /* Fallback for light mode */
-  }
-
-  [data-theme="dark"] {
-    --main-nav-bg-fallback: rgba(152, 150, 150, 0.4); /* Fallback for dark mode */
-  }
+  --main-nav-hover-text: #1c1b1b;
 }
