@@ -1,19 +1,21 @@
 .home {
-  padding: 0 20px;
+  padding: 0px 20px;
+  padding-top: 0px;
 }
 
 .intro {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-  padding: 15px;
-  padding-top: 0;
+  padding-top: 0px;
+  
 }
 
 .intro h1 {
   font-size: 2rem;
   color: var(--text);
   margin-bottom: 10px;
+
 }
 
 .intro p {
@@ -40,6 +42,52 @@
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slick-prev,
+.slick-next {
+  color: var(--accent);
+  z-index: 10;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: var(--accent);
+  font-size: 24px;
+}
+
+.slick-dots li button:before {
+  color: var(--text);
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--accent);
+}
+
+[data-theme="light"] .slick-prev:before,
+[data-theme="light"] .slick-next:before {
+  color: #555555;
+}
+
+[data-theme="light"] .slick-dots li button:before {
+  color: #555555;
+}
+
+[data-theme="light"] .slick-dots li.slick-active button:before {
+  color: #555555;
+}
+
+[data-theme="dark"] .slick-prev:before,
+[data-theme="dark"] .slick-next:before {
+  color: #c2bebe;
+}
+
+[data-theme="dark"] .slick-dots li button:before {
+  color: #b1aeae;
+}
+
+[data-theme="dark"] .slick-dots li.slick-active button:before {
+  color: #979393;
 }
 
 .shop-now-button {
