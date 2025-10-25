@@ -15,6 +15,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import './styles/App.css';
 import { type Product } from './types/Product';
 
+
 const Profile: React.FC = () => {
   return (
     <div className="profile">
@@ -55,6 +56,70 @@ const App: React.FC = () => {
     },
     {
       id: 3,
+      name: 'Cozy Armchair',
+      price: 199.99,
+      image: '#',
+      description: 'A plush armchair ideal for relaxing evenings.',
+      category: 'Living Room',
+    },
+    {
+      id: 4,
+      name: 'Cozy Armchair',
+      price: 199.99,
+      image: '#',
+      description: 'A plush armchair ideal for relaxing evenings.',
+      category: 'Living Room',
+    },
+    {
+      id: 5,
+      name: 'Cozy Armchair',
+      price: 199.99,
+      image: '#',
+      description: 'A plush armchair ideal for relaxing evenings.',
+      category: 'Living Room',
+    },
+    {
+      id: 6,
+      name: 'Cozy Armchair',
+      price: 199.99,
+      image: '#',
+      description: 'A plush armchair ideal for relaxing evenings.',
+      category: 'Living Room',
+    },
+    {
+      id: 7,
+      name: 'Cozy Armchair',
+      price: 199.99,
+      image: '#',
+      description: 'A plush armchair ideal for relaxing evenings.',
+      category: 'Living Room',
+    },
+    {
+      id: 8,
+      name: 'Cozy Armchair',
+      price: 199.99,
+      image: '#',
+      description: 'A plush armchair ideal for relaxing evenings.',
+      category: 'Living Room',
+    },
+    {
+      id: 9,
+      name: 'Cozy Armchair',
+      price: 199.99,
+      image: '#',
+      description: 'A plush armchair ideal for relaxing evenings.',
+      category: 'Living Room',
+    },
+    {
+      id: 10,
+      name: 'Cozy Armchair',
+      price: 199.99,
+      image: '#',
+      description: 'A plush armchair ideal for relaxing evenings.',
+      category: 'Living Room',
+    },
+    {
+      id: 11,
       name: 'Cozy Armchair',
       price: 199.99,
       image: '#',
