@@ -50,55 +50,37 @@
   gap: 15px;
 }
 
-.nav-items button {
-  background-color: var(--button-bg);
-  color: var(--text);
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.nav-items button:hover {
-  background-color: var(--accent);
-}
-
 .nav-icon {
   display: flex;
   align-items: center;
   gap: 5px;
   color: var(--text);
   text-decoration: none;
+  cursor: pointer;
 }
 
 .nav-icon span {
   font-size: 0.9rem;
 }
 
-.language-select {
-  background-color: var(--background);
-  color: var(--text);
-  border: 1px solid var(--button-bg);
-  border-radius: 5px;
-  padding: 5px;
+.nav-icon.language {
+  position: relative;
+}
+
+.nav-icon.language select {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
-.language-select:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-.favorites {
-  cursor: pointer;
-}
-
+.nav-icon.theme-toggle,
+.nav-icon.favorites,
 .nav-icon.cart {
   background: none;
   border: none;
   padding: 0;
-  cursor: pointer;
 }
 
 @media (max-width: 600px) {
