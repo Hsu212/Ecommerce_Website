@@ -16,6 +16,7 @@ import './styles/App.css';
 import { type Product } from './types/Product';
 import AuthContainer from './components/auth/AuthContainer';
 import Profile from './pages/Profile';
+import AuthWrapper from './components/auth/AuthWrapper';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -135,7 +136,7 @@ const App: React.FC = () => {
             <Route path="/kitchen" element={<Kitchen products={mockProducts} addToCart={addToCart} />} />
             <Route path="/bathroom" element={<Bathroom products={mockProducts} addToCart={addToCart} />} />
             <Route path="/sales" element={<Sales products={mockProducts} addToCart={addToCart} />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<AuthWrapper />} />
           </Routes>
         </main>
         <Footer />
