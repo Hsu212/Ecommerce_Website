@@ -1,0 +1,135 @@
+/* src/styles/Auth.css  (replace the whole file) */
+
+.auth-page {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: transparent;
+}
+
+.auth-container {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.12);
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border);
+}
+
+/* ----- Toggle buttons ----- */
+.auth-toggle {
+  display: flex;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.auth-toggle button {
+  flex: 1;
+  padding: 0.75rem;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all .2s;
+  color: var(--text-muted);
+}
+
+.auth-toggle button.active {
+  color: var(--primary);          /* grey primary */
+  border-bottom: 3px solid var(--primary);
+}
+
+/* ----- Form ----- */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.auth-form h2 {
+  margin: 0 0 1rem;
+  text-align: center;
+  color: var(--text);
+  font-size: 1.5rem;
+}
+
+/* Input fields */
+.auth-form input {
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--input-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--input-bg);
+  color: var(--text);
+  transition: border-color .2s;
+}
+
+.auth-form input::placeholder {
+  color: var(--text-muted);
+}
+
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-focus);
+}
+
+/* Submit button */
+.auth-form button {
+  margin-top: 0.5rem;
+  padding: 0.85rem;
+  background: var(--primary);
+  color: #ecebeb;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s, transform .1s;
+}
+
+.auth-form button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.auth-form button:active {
+  transform: translateY(0);
+}
+
+/* -------------------------------------------------
+   GREY-ONLY PALETTE (add to App.css if missing)
+   ------------------------------------------------- */
+:root {
+  /* Light theme */
+  --page-bg:        #bdbbbb;
+  --card-bg:        #fefefe;
+  --border:         #e2e8f0;
+  --input-bg:       #ffffff;
+  --input-border:   #d6dbe0;
+  --text:           #121822;
+  --text-muted:     #8d9093;
+
+  /* GREY primary */
+  --primary:        #6b7280;   /* medium grey */
+  --primary-dark:   #525f71;   /* darker grey for hover */
+  --primary-focus:  rgba(84, 89, 97, 0.15);
+}
+
+[data-theme='dark'] {
+  --page-bg:        #d8dadf;
+  --card-bg:        #5a5c5e;
+  --border:         #334155;
+  --input-bg:       #4e5155;
+  --input-border:   #868a8e;
+  --text:           #5e5a5a;
+  --text-muted:     #6a6d70;
+
+  /* GREY primary – slightly lighter in dark mode */
+  --primary:        #a0a2a5;
+  --primary-dark:   #6e6e6e;
+  --primary-focus:  rgba(156,163,175,.2);
+}
