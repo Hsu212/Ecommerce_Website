@@ -14,8 +14,6 @@ import Sales from './pages/Sales';
 import ErrorBoundary from './components/ErrorBoundary';
 import './styles/App.css';
 import { type Product } from './types/Product';
-import AuthContainer from './components/auth/AuthContainer';
-import Profile from './pages/Profile';
 import AuthWrapper from './components/auth/AuthWrapper';
 
 const App: React.FC = () => {
