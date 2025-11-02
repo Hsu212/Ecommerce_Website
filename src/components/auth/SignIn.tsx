@@ -1,20 +1,16 @@
-// src/components/auth/SignIn.tsx
 import React, { useState } from 'react';
 
-interface Props {
-  onSuccess: () => void;
-}
-
-const SignIn: React.FC<Props> = ({ onSuccess }) => {
+const SignIn: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // DUMMY – will be replaced by Supabase later
-    alert(`Sign-In dummy:\nEmail: ${email}\nPassword: ${password}`);
-    onSuccess();          // show profile
-  };
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  // Mock login
+  const mockUser = { email, username: email.split('@')[0] };
+  localStorage.setItem('user', JSON.stringify(mockUser));
+  alert('Signed in successfully!');
+  window.location.reload(); // Refresh to show profile
+};
 
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
