@@ -1,25 +1,21 @@
-// src/components/auth/SignUp.tsx
 import React, { useState } from 'react';
 
-interface Props {
-  onSuccess: () => void;
-}
-
-const SignUp: React.FC<Props> = ({ onSuccess }) => {
+const SignUp: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirm, setConfirm] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (password !== confirm) {
-      alert('Passwords do not match');
-      return;
-    }
-    // DUMMY – will be replaced by Supabase later
-    alert(`Sign-Up dummy:\nEmail: ${email}\nPassword: ${password}`);
-    onSuccess();          // show profile
-  };
+  e.preventDefault();
+  if (password !== confirm) {
+    alert('Passwords do not match');
+    return;
+  }
+  const mockUser = { email, username: email.split('@')[0] };
+  localStorage.setItem('user', JSON.stringify(mockUser));
+  alert('Account created!');
+  window.location.reload();
+};
 
   return (
     <form className="auth-form" onSubmit={handleSubmit}>
