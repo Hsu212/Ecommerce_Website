@@ -14,16 +14,8 @@ import Sales from './pages/Sales';
 import ErrorBoundary from './components/ErrorBoundary';
 import './styles/App.css';
 import { type Product } from './types/Product';
-
-
-const Profile: React.FC = () => {
-  return (
-    <div className="profile">
-      <h1>User Profile</h1>
-      <p>Profile page under construction.</p>
-    </div>
-  );
-};
+import AuthContainer from './components/auth/AuthContainer';
+import Profile from './pages/Profile';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
