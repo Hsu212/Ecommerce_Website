@@ -1,4 +1,3 @@
-// src/components/auth/AuthWrapper.tsx
 import React from 'react';
 import AuthContainer from './AuthContainer';
 import Profile from '../../pages/Profile';
