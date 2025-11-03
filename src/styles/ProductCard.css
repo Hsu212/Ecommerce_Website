@@ -1,4 +1,3 @@
-/* src/styles/ProductCard.css */
 .product-card {
   position: relative;
   border: 1px solid var(--border, #dee2e6);
@@ -71,3 +70,4 @@
 .product-info button:hover {
   background: var(--primary-hover, #0b5ed7);
 }
+
