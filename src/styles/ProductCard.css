@@ -1,51 +1,73 @@
+/* src/styles/ProductCard.css */
 .product-card {
-  border: 1px solid var(--accent);
-  background-color: var(--background);
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  width: 200px;
-  border-radius: 10px;
-  box-shadow: var(--button-shadow);
-  transition: box-shadow 0.3s;
+  position: relative;
+  border: 1px solid var(--border, #dee2e6);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: var(--card-bg, #fff);
 }
 
 .product-card:hover {
-  box-shadow: var(--button-hover-shadow);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
-.product-card img {
+.product-image-wrapper {
+  position: relative;
+}
+
+.product-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  height: 180px;
+  object-fit: cover;
+  display: block;
 }
 
-.product-card h3 {
-  margin: 10px 0;
-  font-size: 1.2em;
+/* NEW: Color badge */
+.color-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  pointer-events: none;
+  z-index: 1;
 }
 
-.product-card p {
-  margin: 5px 0;
+.product-info {
+  padding: 1rem;
 }
 
-.product-card a {
-  display: inline-block;
-  margin: 10px 0;
-}
-
-.product-card button {
-  background: var(--button-bg);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-  box-shadow: var(--button-shadow);
+.product-info h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
   color: var(--text);
-  font-weight: 500;
-  transition: box-shadow 0.3s;
 }
 
-.product-card button:hover {
-  box-shadow: var(--button-hover-shadow);
+.product-info p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.product-info button {
+  margin-top: 0.75rem;
+  width: 100%;
+  padding: 0.6rem;
+  background: var(--primary, #0d6efd);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.product-info button:hover {
+  background: var(--primary-hover, #0b5ed7);
 }
