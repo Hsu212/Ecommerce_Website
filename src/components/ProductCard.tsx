@@ -1,27 +1,54 @@
 import React from 'react';
-import {type Product} from '../types/Product';
+import { type Product } from '../types/Product';
+import { useNavigate } from 'react-router-dom';
 import '../styles/ProductCard.css';
 
 interface ProductCardProps {
-  product?: Product; // Make product optional to handle undefined
+  product?: Product;
   addToCart: (product: Product) => void;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
+  const navigate = useNavigate();
+
   if (!product) {
     console.warn('ProductCard received undefined product');
     return <div>Product data is missing</div>;
   }
 
+  const goToDetails = () => {
+    navigate(`/products/${product.id}`);
+  };
+
+  const hasMultipleColors = product.colors.length > 1;
+
   return (
-    <div className="product-card">
-      <img src={product.image} alt={product.name} className="product-image" />
+    <div className="product-card" onClick={goToDetails} style={{ cursor: 'pointer' }}>
+      <div className="product-image-wrapper">
+        <img src={product.image} alt={product.name} className="product-image" />
+        
+        {/* NEW: Color badge */}
+        {hasMultipleColors && (
+          <div className="color-badge">
+            View {product.colors.length} colors
+          </div>
+        )}
+      </div>
+
       <div className="product-info">
         <h3>{product.name}</h3>
         <p>{product.description}</p>
         <p>Price: ${product.price.toFixed(2)}</p>
         <p>Category: {product.category}</p>
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
+
+        <button
+          onClick={(e) => {
+            e.stopPropagation();
+            addToCart(product);
+          }}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );
