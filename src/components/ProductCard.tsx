@@ -38,7 +38,23 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
       <div className="product-info">
         <h3>{product.name}</h3>
         <p>{product.description}</p>
-        <p>Price: ${product.price.toFixed(2)}</p>
+        <p className="product-price">
+          {product.discountPercent ? (
+            <>
+            <span className="original-price">
+              ${product.price.toFixed(2)}
+              </span>{' '}
+              <span className="discounted-price">
+                ${(product.price * (1 - product.discountPercent / 100)).toFixed(2)}
+                </span>
+                <span className="discount-badge">
+                  -{product.discountPercent}%
+                  </span>
+                  </>
+                  ) : (
+                  <>${product.price.toFixed(2)}</>
+                  )}
+        </p>
         <p>Category: {product.category}</p>
 
         <button
