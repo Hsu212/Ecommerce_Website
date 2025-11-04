@@ -23,14 +23,24 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
         <div>
           {cartItems.map((item) => (
             <div key={item.id} className="cart-item">
-              <img src={item.image} alt={item.name} />
-              <div>
+              <img
+              src={item.selectedColor?.image || item.image}
+              alt={item.name}
+              />
+              <div className="cart-item-info">
                 <h3>{item.name}</h3>
-                <p>Price: ${item.price.toFixed(2)}</p>
-                <p>Category: {item.category}</p>
-                <button onClick={() => removeFromCart(item.id)}>Remove</button>
-              </div>
-            </div>
+                {item.selectedColor && (
+                  <p className="selected-color">
+                    Color: <span style={{ color: item.selectedColor.hex }}>
+                      {item.selectedColor.name}
+                      </span>
+                      </p>
+                 )}
+                 <p>Price: ${item.price.toFixed(2)}</p>
+                 <p>Category: {item.category}</p>
+                 <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                 </div>
+                 </div>
           ))}
           <h3>Total: ${totalPrice.toFixed(2)}</h3>
         </div>
