@@ -9,8 +9,17 @@ interface SalesProps {
 }
 
 const Sales: React.FC<SalesProps> = ({ products, addToCart }) => {
-  // Filter for sales products (assuming no isOnSale field yet)
-  const salesProducts = products; // Update if isOnSale is added
+  // Filter products that have a discount
+  const salesProducts = products.filter(p => p.discountPercent && p.discountPercent > 0);
+
+  if (salesProducts.length === 0) {
+    return (
+      <div className="products">
+        <h1>Sales Products</h1>
+        <p>No products on sale at the moment.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="products">
