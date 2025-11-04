@@ -36,6 +36,7 @@ const App: React.FC = () => {
     image: 'https://www.ikea.com/us/en/images/products/uppland-sofa-blekinge-white__0818565_pe774487_s5.jpg?f=xl',
     description: 'A sleek, comfortable sofa for modern living rooms.',
     category: 'Living Room',
+    discountPercent: 20,
     colors: [
       {
         name: 'White',
@@ -86,6 +87,7 @@ const App: React.FC = () => {
     image: 'https://www.ikea.com/us/en/images/products/ekenaeset-armchair-kilanda-light-beige__1109687_pe870153_s5.jpg?f=xl',
     description: 'A plush armchair ideal for relaxing evenings.',
     category: 'Living Room',
+    discountPercent: 20,
     colors: [
       {
         name: 'Cream Beige',
