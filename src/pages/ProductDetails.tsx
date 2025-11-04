@@ -74,9 +74,20 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
             <p className="selected-color-name">{selectedColor.name}</p>
           </div>
 
-          <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
-            Add to Cart
-          </button>
+          <button
+          className="add-to-cart-btn"
+          onClick={() => {
+            const productWithColor = {
+              ...product,
+              selectedColor: {
+                name: selectedColor.name,
+                hex: selectedColor.hex,
+                image: currentImage, // use current image
+             },
+            };
+            addToCart(productWithColor);
+            }}
+            >Add to Cart</button>
         </div>
       </div>
     </div>
