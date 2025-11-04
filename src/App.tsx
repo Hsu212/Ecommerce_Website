@@ -252,7 +252,7 @@ const App: React.FC = () => {
     name: 'Ceiling Lights',
     price: 249.99,
     image: 'https://www.ikea.com/us/en/images/products/stockholm-2025-pendant-lamp-glass-brass-plated__1285162_pe933235_s5.jpg?f=xl',
-    description: '',
+    description: 'Whether you hang this chandelier over the dining table or in the living room, it will be an eye-catcher with its glass cylinders and brass-plated details.',
     category: 'Living Room',
     colors: [
       {
