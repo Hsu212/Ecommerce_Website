@@ -5,22 +5,20 @@ import '../styles/Auth.css';
 const Profile: React.FC = () => {
   const navigate = useNavigate();
   const user = JSON.parse(localStorage.getItem('user') || 'null');
-
-  // Only redirect if NOT logged in
+  
   useEffect(() => {
   if (!user) {
     navigate('/profile', { replace: true });
   }
 }, [user, navigate]);
 
-  // If no user, show nothing (redirect is in useEffect)
   if (!user) {
     return null;
   }
 
   const handleLogout = () => {
     localStorage.removeItem('user');
-    navigate('/profile'); // back to login
+    navigate('/profile'); 
   };
 
   return (
