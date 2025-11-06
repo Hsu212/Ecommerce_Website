@@ -1,16 +1,15 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { type Product } from '../types/Product';
+import { mockProducts } from '../data/mockProducts';
 import '../styles/Products.css';
 
 interface SalesProps {
-  products: Product[];
   addToCart: (product: Product) => void;
 }
 
-const Sales: React.FC<SalesProps> = ({ products, addToCart }) => {
-  // Filter products that have a discount
-  const salesProducts = products.filter(p => p.discountPercent && p.discountPercent > 0);
+const Sales: React.FC<SalesProps> = ({ addToCart }) => {
+  const salesProducts = mockProducts.filter(p => p.discountPercent && p.discountPercent > 0);
 
   if (salesProducts.length === 0) {
     return (
