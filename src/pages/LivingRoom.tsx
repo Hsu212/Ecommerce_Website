@@ -1,4 +1,3 @@
-// src/pages/LivingRoom.tsx
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { type Product } from '../types/Product';
@@ -27,5 +26,6 @@ const LivingRoom: React.FC<LivingRoomProps> = ({ addToCart }) => {
     </div>
   );
 };
+
 
 export default LivingRoom;
