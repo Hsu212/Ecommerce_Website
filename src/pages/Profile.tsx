@@ -1,4 +1,3 @@
-// src/pages/Profile.tsx
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Auth.css';
@@ -41,5 +40,6 @@ const Profile: React.FC = () => {
     </div>
   );
 };
+
 
 export default Profile;
