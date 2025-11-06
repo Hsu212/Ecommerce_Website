@@ -1,19 +1,19 @@
 :root {
-  --background: #dcdcdc; /* Light theme background */
-  --secondary-bg: #a9a9a9; /* Secondary elements */
-  --text: #555555; /* Text color */
-  --accent: #808080; /* Accents or hover states */
-  --button-bg: #dcdcdc; /* Button background */
-  --button-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.7); /* Neumorphic shadows */
+  --background: #dcdcdc; 
+  --secondary-bg: #a9a9a9; 
+  --text: #555555; 
+  --accent: #808080; 
+  --button-bg: #dcdcdc; 
+  --button-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.7); 
   --button-hover-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.2), inset -2px -2px 5px rgba(255, 255, 255, 0.7);
 }
 
 [data-theme="dark"] {
-  --background: #555555; /* Dark theme background */
-  --secondary-bg: #a9a9a9; /* Secondary elements */
-  --text: #dcdcdc; /* Text color */
-  --accent: #808080; /* Accents or hover states */
-  --button-bg: #555555; /* Button background */
+  --background: #555555; 
+  --secondary-bg: #a9a9a9; 
+  --text: #dcdcdc; 
+  --accent: #808080; 
+  --button-bg: #555555;
   --button-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(128, 128, 128, 0.3);
   --button-hover-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.4), inset -2px -2px 5px rgba(128, 128, 128, 0.3);
 }
