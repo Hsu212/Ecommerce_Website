@@ -1,138 +1,197 @@
+:root {
+  --bg: #e0e5ec;
+}
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+}
 .home {
-  padding: 0px 20px;
-  padding-top: 0px;
+  background: transparent;
+  color: var(--text);
+  min-height: 100vh;
 }
 
+/* Intro */
 .intro {
   text-align: center;
+  padding: 3rem 1rem 2rem;
   max-width: 800px;
   margin: 0 auto;
-  padding-top: 0px;
-  
 }
-
 .intro h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
   color: var(--text);
-  margin-bottom: 10px;
-
 }
-
 .intro p {
   font-size: 1.1rem;
-  color: var(--text);
-  opacity: 0.8;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
+/* Carousel */
 .home-carousel {
-  max-width: 1200px;
-  margin: 10px auto;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
 
 .carousel-slide {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 500px;
+  overflow: hidden;
 }
 
 .carousel-image {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: block;
+  transition: transform 0.5s ease;
 }
 
-.slick-prev,
-.slick-next {
-  color: var(--accent);
-  z-index: 10;
+.carousel-slide:hover .carousel-image {
+  transform: scale(1.03);
 }
 
-.slick-prev:before,
-.slick-next:before {
-  color: var(--accent);
-  font-size: 24px;
-}
-
-.slick-dots li button:before {
-  color: var(--text);
-}
-
-.slick-dots li.slick-active button:before {
-  color: var(--accent);
-}
-
-[data-theme="light"] .slick-prev:before,
-[data-theme="light"] .slick-next:before {
-  color: #555555;
-}
-
-[data-theme="light"] .slick-dots li button:before {
-  color: #555555;
-}
-
-[data-theme="light"] .slick-dots li.slick-active button:before {
-  color: #555555;
-}
-
-[data-theme="dark"] .slick-prev:before,
-[data-theme="dark"] .slick-next:before {
-  color: #c2bebe;
-}
-
-[data-theme="dark"] .slick-dots li button:before {
-  color: #b1aeae;
-}
-
-[data-theme="dark"] .slick-dots li.slick-active button:before {
-  color: #979393;
-}
-
-.shop-now-button {
+/* Carousel Text Overlay */
+.carousel-overlay {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--secondary-bg);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  color: #fff;
+  padding: 5rem 2rem 2.5rem;
+  text-align: center;
+  backdrop-filter: blur(3px);
+  z-index: 10; /* FIX: ensure above image */
+  pointer-events: auto;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.carousel-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.carousel-subtitle {
+  font-size: 1.25rem;
+  margin: 0 0 1.5rem;
+  opacity: 0.95;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* ——— NEUMORPHISM CTA BUTTON ——— */
+.carousel-cta {
+  display: inline-block;
+  background: var(--bg);
   color: var(--text);
-  padding: 10px 20px;
-  border-radius: 25px;
+  padding: 0.9rem 2.4rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.15), -3px -3px 6px rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.15),
+    -8px -8px 16px rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  pointer-events: auto;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.shop-now-button:hover {
-  background-color: var(--secondary-bg);
-  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.2), inset -2px -2px 4px rgba(255, 255, 255, 0.5);
-  transform: translateX(-50%) scale(1.05);
-  color: var(--accent);
+.carousel-cta:hover {
+  box-shadow: 
+    4px 4px 8px rgba(0, 0, 0, 0.2),
+    -4px -4px 8px rgba(255, 255, 255, 0.15),
+    inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 600px) {
-  .intro {
-    margin: 0 auto;
-    padding: 10px;
-    padding-top: 0;
-  }
+.carousel-cta:active {
+  box-shadow: 
+    inset 4px 4px 8px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.1);
+  transform: translateY(1px);
+}
 
-  .intro h1 {
-    font-size: 1.5rem;
-  }
+/* Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  .intro p {
-    font-size: 0.9rem;
-  }
+/* Sales Section */
+.home-sales {
+  padding: 2rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.sales-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding: 0 1rem;
+}
+.sales-header h2 {
+  font-size: 2rem;
+  color: var(--danger);
+  margin: 0;
+  font-weight: 700;
+}
+.view-all-link {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.view-all-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
 
-  .carousel-image {
-    height: 300px;
-  }
+.sales-product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
 
-  .shop-now-button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
+.no-sales {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .carousel-slide { height: 450px; }
+}
+
+@media (max-width: 768px) {
+  .carousel-slide { height: 400px; }
+  .carousel-overlay { padding: 4rem 1.5rem 2rem; }
+  .carousel-title { font-size: 2rem; }
+  .carousel-subtitle { font-size: 1.1rem; }
+  .carousel-cta { padding: 0.75rem 1.8rem; font-size: 1rem; }
+  .sales-header { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .carousel-slide { height: 350px; }
+  .carousel-title { font-size: 1.7rem; }
+  .carousel-subtitle { font-size: 0.95rem; }
 }
