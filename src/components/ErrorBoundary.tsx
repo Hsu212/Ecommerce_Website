@@ -1,4 +1,4 @@
-import React, { type ReactNode } from 'react'; // Use type-only import for ReactNode
+import React, { type ReactNode } from 'react'; 
 
 interface ErrorBoundaryProps {
   children: ReactNode;
