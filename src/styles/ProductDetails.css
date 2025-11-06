@@ -17,7 +17,6 @@
   }
 }
 
-/* ----- GALLERY ----- */
 .product-gallery {
   display: flex;
   flex-direction: column;
@@ -35,7 +34,6 @@
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
-/* Thumbnails */
 .thumbnail-strip {
   display: flex;
   gap: 0.75rem;
@@ -61,7 +59,6 @@
   border-color: var(--primary);
 }
 
-/* ----- INFO ----- */
 .product-info-wrapper h1 {
   margin: 0 0 0.75rem;
   font-size: 2rem;
@@ -84,7 +81,6 @@
   font-style: italic;
 }
 
-/* ----- COLOR SELECTOR ----- */
 .color-selector {
   margin: 1.5rem 0;
 }
@@ -119,7 +115,6 @@
   color: var(--text);
 }
 
-/* ----- ADD TO CART ----- */
 .add-to-cart-btn {
   width: 100%;
   padding: 0.85rem;
