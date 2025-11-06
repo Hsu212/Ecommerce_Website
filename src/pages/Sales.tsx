@@ -1,4 +1,3 @@
-// src/pages/Sales.tsx
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { type Product } from '../types/Product';
@@ -36,5 +35,6 @@ const Sales: React.FC<SalesProps> = ({ addToCart }) => {
     </div>
   );
 };
+
 
 export default Sales;
