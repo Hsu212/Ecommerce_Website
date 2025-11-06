@@ -1,10 +1,10 @@
 import React from 'react';
-import { type Product } from '../types/Product'; // Updated to uppercase Product
+import { type Product } from '../types/Product';
 import '../styles/Cart.css';
 
 interface CartProps {
-  cartItems: Product[]; // Updated to uppercase Product
-  setCartItems: React.Dispatch<React.SetStateAction<Product[]>>; // Updated to uppercase Product
+  cartItems: Product[]; 
+  setCartItems: React.Dispatch<React.SetStateAction<Product[]>>; 
 }
 
 const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
