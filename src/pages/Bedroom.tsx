@@ -1,4 +1,3 @@
-// src/pages/Bedroom.tsx
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { type Product } from '../types/Product';
@@ -27,5 +26,6 @@ const Bedroom: React.FC<BedroomProps> = ({ addToCart }) => {
     </div>
   );
 };
+
 
 export default Bedroom;
