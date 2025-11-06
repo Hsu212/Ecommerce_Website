@@ -15,7 +15,7 @@ import ErrorBoundary from './components/ErrorBoundary';
 import './styles/App.css';
 import { type Product } from './types/Product';
 import AuthWrapper from './components/auth/AuthWrapper';
-import { mockProducts } from './data/mockProducts'; // ← NEW
+import { mockProducts } from './data/mockProducts';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
