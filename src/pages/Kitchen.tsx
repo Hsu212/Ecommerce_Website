@@ -1,15 +1,15 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { type Product } from '../types/Product';
+import { mockProducts } from '../data/mockProducts';
 import '../styles/Products.css';
 
 interface KitchenProps {
-  products: Product[];
   addToCart: (product: Product) => void;
 }
 
-const Kitchen: React.FC<KitchenProps> = ({ products, addToCart }) => {
-  const kitchenProducts = products.filter((product) => product.category === 'Kitchen');
+const Kitchen: React.FC<KitchenProps> = ({ addToCart }) => {
+  const kitchenProducts = mockProducts.filter(p => p.category === 'Kitchen');
 
   return (
     <div className="products">
