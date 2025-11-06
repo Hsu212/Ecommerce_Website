@@ -5,14 +5,13 @@
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
   background: var(--card-bg, #fff);
-  /* SMALLER SIZE */
   width: 100%;
-  max-width: 280px; /* ← WAS: none */
+  max-width: 280px; 
 }
 
 .product-card:hover {
-  transform: translateY(-2px); /* ← SMALLER LIFT */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ← SMALLER SHADOW */
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
 }
 
 .product-image-wrapper {
@@ -21,52 +20,51 @@
 
 .product-image {
   width: 100%;
-  height: 160px; /* ← WAS: 180px */
+  height: 160px; 
   object-fit: cover;
   display: block;
 }
 
-/* Color badge */
 .color-badge {
   position: absolute;
   top: 8px;
   right: 8px;
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
-  font-size: 0.7rem; /* ← SMALLER */
+  font-size: 0.7rem; 
   font-weight: 600;
-  padding: 0.25rem 0.5rem; /* ← SMALLER */
+  padding: 0.25rem 0.5rem; 
   border-radius: 4px;
   pointer-events: none;
   z-index: 1;
 }
 
 .product-info {
-  padding: 0.75rem; /* ← WAS: 1rem */
+  padding: 0.75rem; 
 }
 
 .product-info h3 {
-  margin: 0 0 0.25rem; /* ← SMALLER */
-  font-size: 1rem; /* ← WAS: 1.1rem */
+  margin: 0 0 0.25rem; 
+  font-size: 1rem; 
   color: var(--text);
 }
 
 .product-info p {
-  margin: 0.2rem 0; /* ← WAS: 0.25rem */
-  font-size: 0.85rem; /* ← WAS: 0.9rem */
+  margin: 0.2rem 0; 
+  font-size: 0.85rem; 
   color: var(--text-muted);
 }
 
 .product-info button {
-  margin-top: 0.5rem; /* ← WAS: 0.75rem */
+  margin-top: 0.5rem; 
   width: 100%;
-  padding: 0.5rem; /* ← WAS: 0.6rem */
+  padding: 0.5rem; 
   background: var(--primary, #0d6efd);
   color: #fff;
   border: none;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 0.85rem; /* ← SMALLER */
+  font-size: 0.85rem; 
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -75,33 +73,32 @@
   background: var(--primary-hover, #0b5ed7);
 }
 
-/* Discount styling */
 .product-price {
   display: flex;
   align-items: center;
-  gap: 0.3rem; /* ← SMALLER */
+  gap: 0.3rem; 
   flex-wrap: wrap;
-  font-size: 0.9rem; /* ← WAS: 1rem */
-  margin: 0.3rem 0; /* ← SMALLER */
+  font-size: 0.9rem; 
+  margin: 0.3rem 0; 
 }
 
 .original-price {
   text-decoration: line-through;
   color: var(--text-muted);
-  font-size: 0.8rem; /* ← SMALLER */
+  font-size: 0.8rem; 
 }
 
 .discounted-price {
   font-weight: 600;
   color: var(--danger);
-  font-size: 0.95rem; /* ← WAS: 1.1rem */
+  font-size: 0.95rem; 
 }
 
 .discount-badge {
   background: var(--danger);
   color: #fff;
-  font-size: 0.7rem; /* ← SMALLER */
+  font-size: 0.7rem; 
   font-weight: 600;
-  padding: 0.1rem 0.3rem; /* ← SMALLER */
-  border-radius: 3px; /* ← SMALLER */
+  padding: 0.1rem 0.3rem; 
+  border-radius: 3px; 
 }
