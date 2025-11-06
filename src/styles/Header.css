@@ -1,0 +1,27 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background-color: var(--background);
+}
+
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.3s ease, height 0.3s ease;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.search-bar-container.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.search-bar-container.visible {
+  opacity: 1;
+  height: auto;
+}

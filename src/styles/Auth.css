@@ -1,0 +1,190 @@
+/* -------------------------------------------------
+   AUTH PAGE – shared layout
+   ------------------------------------------------- */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  padding: 2rem 1rem;
+}
+
+/* -------------------------------------------------
+   AUTH CONTAINER (Sign-In / Sign-Up toggle)
+   ------------------------------------------------- */
+.auth-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* toggle buttons */
+.auth-toggle {
+  display: flex;
+}
+.auth-toggle button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.auth-toggle button.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* -------------------------------------------------
+   FORM (Sign-In / Sign-Up)
+   ------------------------------------------------- */
+.auth-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.auth-form h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--text);
+}
+.auth-form input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input-bg);
+  color: var(--text);
+  transition: border-color 0.2s;
+}
+.auth-form input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+.auth-form button {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.auth-form button:hover {
+  background: var(--primary-hover);
+}
+
+/* -------------------------------------------------
+   PROFILE PAGE
+   ------------------------------------------------- */
+.profile-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* avatar */
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+}
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* text */
+.profile-container h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: var(--text);
+}
+.profile-email {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* logout button */
+.logout-btn {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  background: var(--danger);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logout-btn:hover {
+  background: var(--danger-hover);
+}
+
+/* -------------------------------------------------
+   THEME VARIABLES (light / dark)
+   ------------------------------------------------- */
+[data-theme='light'] {
+  --bg: #f8f9fa;
+  --card-bg: #ffffff;
+  --text: #212529;
+  --text-muted: #6c757d;
+  --border: #dee2e6;
+  --input-bg: #ffffff;
+  --primary: #65676b;
+  --primary-hover: #818184;
+  --danger: #62060e;
+  --danger-hover: #3e0309;
+}
+
+[data-theme='dark'] {
+  --bg: #121212;
+  --card-bg: #1e1e1e;
+  --text: #e9ecef;
+  --text-muted: #adb5bd;
+  --border: #343a40;
+  --input-bg: #2d2d2d;
+  --primary: #9fa0a2;
+  --primary-hover: #606163;
+  --danger: #62060e;
+  --danger-hover: #3e0309;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------- */
+@media (max-width: 480px) {
+  .auth-container,
+  .profile-container {
+    max-width: 100%;
+    margin: 0 1rem;
+  }
+}
