@@ -1,4 +1,3 @@
-// src/pages/Bathroom.tsx
 import React from 'react';
 import ProductCard from '../components/ProductCard';
 import { type Product } from '../types/Product';
@@ -29,3 +28,4 @@ const Bathroom: React.FC<BathroomProps> = ({ addToCart }) => {
 };
 
 export default Bathroom;
+
