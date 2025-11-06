@@ -1,4 +1,3 @@
-// src/pages/Products.tsx
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
@@ -59,5 +58,6 @@ const Products: React.FC<ProductsProps> = ({ addToCart }) => {
     </div>
   );
 };
+
 
 export default Products;
