@@ -13,7 +13,6 @@ export interface Product {
     images: string[];
   }[];
 
-  // NEW – for cart
   selectedColor?: {
     name: string;
     hex: string;
