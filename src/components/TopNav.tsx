@@ -37,10 +37,9 @@ const TopNav: React.FC<TopNavProps> = ({ cartCount, toggleTheme, theme, isScroll
           <FaUser />
           
         </Link>
-        <div className="nav-icon favorites">
+        <Link to="/favorites" className="nav-icon favorites">
           <FaHeart />
-          <span>0</span>
-        </div>
+        </Link>
         <Link to="/cart" className="nav-icon cart">
           <FaShoppingCart />
           <span>{cartCount}</span>
