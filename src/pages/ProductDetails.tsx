@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; // ← FIXED: import useNavigate
 import { type Product } from '../types/Product';
 import '../styles/ProductDetails.css';
 
@@ -10,6 +10,7 @@ interface ProductDetailsProps {
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) => {
   const { id } = useParams<{ id: string }>();
+  const navigate = useNavigate(); // ← FIXED: now used
   const product = products.find((p) => p.id === Number(id));
 
   // Default to first colour
@@ -74,20 +75,43 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
             <p className="selected-color-name">{selectedColor.name}</p>
           </div>
 
-          <button
-          className="add-to-cart-btn"
-          onClick={() => {
-            const productWithColor = {
-              ...product,
-              selectedColor: {
-                name: selectedColor.name,
-                hex: selectedColor.hex,
-                image: currentImage, // use current image
-             },
-            };
-            addToCart(productWithColor);
-            }}
-            >Add to Cart</button>
+          {/* Buttons */}
+          <div className="product-details-buttons">
+            <button
+              className="add-to-cart-btn"
+              onClick={() => {
+                const productWithColor = {
+                  ...product,
+                  selectedColor: {
+                    name: selectedColor.name,
+                    hex: selectedColor.hex,
+                    image: currentImage,
+                  },
+                };
+                addToCart(productWithColor);
+              }}
+            >
+              Add to Cart
+            </button>
+
+            <button
+              className="buy-now-btn"
+              onClick={() => {
+                const productWithColor = {
+                  ...product,
+                  selectedColor: {
+                    name: selectedColor.name,
+                    hex: selectedColor.hex,
+                    image: currentImage,
+                  },
+                };
+                addToCart(productWithColor);
+                navigate('/cart'); // ← FIXED: now works
+              }}
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </div>
