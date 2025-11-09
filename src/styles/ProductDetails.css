@@ -1,3 +1,4 @@
+/* src/styles/ProductDetails.css */
 .product-details {
   padding: 2rem 1rem;
   max-width: 1200px;
@@ -135,5 +136,59 @@
 }
 .add-to-cart-btn:hover {
   background: var(--primary-hover);
+}
+/* ——— PRODUCT DETAILS BUTTONS (SAME SIZE) ——— */
+.product-details-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
 
+.product-details-buttons button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  min-width: 0; /* ← FIX: ensures equal width */
+  white-space: nowrap;
+}
+
+.add-to-cart-btn {
+  background: var(--primary);
+  color: #fff;
+}
+
+.add-to-cart-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.buy-now-btn {
+  background: var(--danger);
+  color: #fff;
+}
+
+.buy-now-btn:hover {
+  background: #44050d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(107, 25, 33, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .product-details-buttons {
+    flex-direction: column;
+  }
+  .product-details-buttons button {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+  }
 }
