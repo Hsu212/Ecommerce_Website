@@ -16,6 +16,8 @@ import './styles/App.css';
 import { type Product } from './types/Product';
 import AuthWrapper from './components/auth/AuthWrapper';
 import { mockProducts } from './data/mockProducts'; // ← NEW
+import Favorites from './pages/Favorites';
+import { FavoritesProvider } from './context/FavoritesContext';
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -32,8 +34,9 @@ const App: React.FC = () => {
   
   
   return (
-    <div className="app" data-theme={theme}>
-      <ErrorBoundary>
+  <div className="app" data-theme={theme}>
+    <ErrorBoundary>
+      <FavoritesProvider>
         <Header cartCount={cartItems.length} toggleTheme={toggleTheme} theme={theme} />
         <main>
           <Routes>
@@ -47,12 +50,14 @@ const App: React.FC = () => {
             <Route path="/bathroom" element={<Bathroom addToCart={addToCart} />} />
             <Route path="/sales" element={<Sales addToCart={addToCart} />} />
             <Route path="/profile" element={<AuthWrapper />} />
+            <Route path="/favorites" element={<Favorites />} />
           </Routes>
         </main>
         <Footer />
-      </ErrorBoundary>
-    </div>
-  );
+      </FavoritesProvider>
+    </ErrorBoundary>
+  </div>
+);
 };
 
 export default App;
