@@ -1,0 +1,34 @@
+.favorites {
+  padding: 3rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.favorites h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.empty-message {
+  font-size: 1.3rem;
+  color: var(--text-muted);
+  margin: 2rem 0;
+  font-style: italic;
+  text-align: center;
+}
+
+.empty-subtext {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.favorites-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
