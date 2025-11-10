@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; // ← FIXED: import useNavigate
+import { useParams, useNavigate } from 'react-router-dom'; 
 import { type Product } from '../types/Product';
 import '../styles/ProductDetails.css';
 
@@ -10,10 +10,9 @@ interface ProductDetailsProps {
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate(); // ← FIXED: now used
+  const navigate = useNavigate(); 
   const product = products.find((p) => p.id === Number(id));
 
-  // Default to first colour
   const [selectedColor, setSelectedColor] = useState(product?.colors[0]);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
@@ -28,13 +27,11 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
     <div className="product-details">
       <div className="product-details-grid">
 
-        {/* ----- IMAGE GALLERY ----- */}
         <div className="product-gallery">
           <div className="main-image-wrapper">
             <img src={currentImage} alt={`${product.name} - ${selectedColor.name}`} className="main-image" />
           </div>
 
-          {/* Thumbnails */}
           <div className="thumbnail-strip">
             {currentImages.map((img, idx) => (
               <button
@@ -48,14 +45,28 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
           </div>
         </div>
 
-        {/* ----- INFO & COLOR SELECTOR ----- */}
         <div className="product-info-wrapper">
           <h1>{product.name}</h1>
           <p className="product-description">{product.description}</p>
-          <p className="product-price">Price: ${product.price.toFixed(2)}</p>
+          <p className="product-price">
+            Price:{' '}
+            {product.discountPercent ? (
+            <>
+              <span className="original-price">
+                ${product.price.toFixed(2)}
+              </span>{' '}
+              <span className="discounted-price">
+                ${(product.price * (1 - product.discountPercent / 100)).toFixed(2)}
+              </span>
+              <span className="discount-badge">
+                -{product.discountPercent}%
+              </span>
+            </>
+            ) : (
+            <>${product.price.toFixed(2)}</>
+           )}
+          </p>
           <p className="product-category">Category: {product.category}</p>
-
-          {/* Color Selector */}
           <div className="color-selector">
             <p className="color-label">Color:</p>
             <div className="color-options">
@@ -67,7 +78,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
                   title={c.name}
                   onClick={() => {
                     setSelectedColor(c);
-                    setSelectedImageIndex(0); // reset to first image of new colour
+                    setSelectedImageIndex(0); 
                   }}
                 />
               ))}
@@ -75,7 +86,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
             <p className="selected-color-name">{selectedColor.name}</p>
           </div>
 
-          {/* Buttons */}
           <div className="product-details-buttons">
             <button
               className="add-to-cart-btn"
@@ -106,7 +116,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
                   },
                 };
                 addToCart(productWithColor);
-                navigate('/cart'); // ← FIXED: now works
+                navigate('/cart'); 
               }}
             >
               Buy Now
