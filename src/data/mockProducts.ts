@@ -79,6 +79,7 @@ export const mockProducts: Product[] = [
     image: 'https://www.ikea.com/us/en/images/products/faxaelven-mirror-cabinet-w-built-in-lighting-oak-effect__1198705_pe904180_s5.jpg?f=xl',
     description: 'Mirror cabinet w built-in lighting, effect.',
     category: 'Bathroom',
+    discountPercent: 20,
     colors: [
       {
         name: 'Oak effect',
@@ -180,6 +181,7 @@ export const mockProducts: Product[] = [
     image: 'https://www.ikea.com/us/en/images/products/aengsjoen-orrsjoen-bathroom-vanity-with-sink-faucet-oak-effect__1217244_pe912641_s5.jpg?f=xl',
     description: 'Generous, full drawer storage capacity for all your essentials as piping is led through the back and not via a cut-out in the drawers. Drawers open all the way for a good overview.',
     category: 'Bathroom',
+    discountPercent: 20,
     colors: [
       {
         name: 'Oak effect',
