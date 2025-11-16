@@ -25,11 +25,10 @@
   display: block;
 }
 
-/* Color badge */
 .color-badge {
   position: absolute;
   top: 8px;
-  right: 8px;
+  left: 8px;  
   background: rgba(0, 0, 0, 0.7);
   color: #fff;
   font-size: 0.7rem; 
@@ -65,7 +64,7 @@
   border: none;
   border-radius: 6px;
   font-weight: 600;
-  font-size: 0.85rem; /* ← SMALLER */
+  font-size: 0.85rem; 
   cursor: pointer;
   transition: background 0.2s;
 }
@@ -143,7 +142,6 @@
   transform: translateY(-1px);
 }
 
-/* Responsive */
 @media (max-width: 480px) {
   .product-buttons {
     flex-direction: column;
@@ -152,7 +150,7 @@
     width: 100%;
   }
 }
-/* ——— FAVORITE BUTTON ——— */
+
 .favorite-btn {
   position: absolute;
   top: 12px;
@@ -170,6 +168,7 @@
   transition: all 0.3s ease;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
+  z-index: 2; 
 }
 
 .favorite-btn:hover {
