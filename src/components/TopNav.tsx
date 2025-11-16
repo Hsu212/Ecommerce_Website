@@ -19,7 +19,7 @@ const TopNav: React.FC<TopNavProps> = ({ cartCount, toggleTheme, theme, isScroll
   return (
     <div className="top-nav">
       <Link to="/" className="logo">
-        Furniture Store
+        SM Home
       </Link>
       <div className={`search-bar-container ${isScrolled ? 'visible' : 'hidden'}`}>
         {isScrolled && <SearchBar />}
@@ -53,3 +53,4 @@ const TopNav: React.FC<TopNavProps> = ({ cartCount, toggleTheme, theme, isScroll
 };
 
 export default TopNav;
+
