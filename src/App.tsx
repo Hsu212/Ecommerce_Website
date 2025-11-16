@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -15,9 +15,19 @@ import ErrorBoundary from './components/ErrorBoundary';
 import './styles/App.css';
 import { type Product } from './types/Product';
 import AuthWrapper from './components/auth/AuthWrapper';
-import { mockProducts } from './data/mockProducts'; // ← NEW
+import { mockProducts } from './data/mockProducts'; 
 import Favorites from './pages/Favorites';
 import { FavoritesProvider } from './context/FavoritesContext';
+
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
@@ -38,6 +48,7 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <FavoritesProvider>
         <Header cartCount={cartItems.length} toggleTheme={toggleTheme} theme={theme} />
+        <ScrollToTop />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
