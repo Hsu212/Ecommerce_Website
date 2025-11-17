@@ -5,6 +5,7 @@ import VisaCard from '../assets/VisaCard.png';
 import MasterCard from '../assets/MasterCard.png';
 import PayPal from '../assets/PayPal.png';
 
+
 interface CartProps {
   cartItems: Product[];
   setCartItems: React.Dispatch<React.SetStateAction<Product[]>>;
@@ -46,6 +47,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
         </p>
       ) : (
         <div className="cart-layout">
+          {/* Left: Cart Items */}
           <div className="cart-items-section">
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
@@ -72,9 +74,11 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
             ))}
           </div>
 
+          {/* Right: Checkout Summary */}
           <div className="checkout-summary">
             <h2>Order Summary</h2>
 
+            {/* Address Form */}
             <div className="checkout-section">
               <h3>Shipping Address</h3>
               <input
@@ -105,6 +109,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
               </div>
             </div>
 
+            {/* Voucher */}
             <div className="checkout-section">
               <h3>Shop Voucher</h3>
               <div className="voucher-input">
@@ -126,6 +131,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
               )}
             </div>
 
+            {/* Payment Method */}
             <div className="checkout-section">
               <h3>Payment Method</h3>
               <label className="payment-option">
@@ -147,6 +153,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
               </label>
             </div>
 
+            {/* Price Breakdown */}
             <div className="price-breakdown">
               <div className="price-row">
                 <span>Subtotal ({cartItems.length} items)</span>
