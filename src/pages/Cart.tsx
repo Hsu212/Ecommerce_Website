@@ -3,7 +3,7 @@ import { type Product } from '../types/Product';
 import '../styles/Cart.css';
 import VisaCard from '../assets/VisaCard.png';
 import MasterCard from '../assets/MasterCard.png';
-import PayPal from '../assets/PayPal.png';
+import PayPal from '../assets/Paypal.png';
 
 
 interface CartProps {
