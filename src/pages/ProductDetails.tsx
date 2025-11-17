@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom'; 
+import { useParams } from 'react-router-dom';
 import { type Product } from '../types/Product';
 import '../styles/ProductDetails.css';
 
@@ -10,7 +10,6 @@ interface ProductDetailsProps {
 
 const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate(); 
   const product = products.find((p) => p.id === Number(id));
 
   const [selectedColor, setSelectedColor] = useState(product?.colors[0]);
@@ -78,8 +77,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
                   title={c.name}
                   onClick={() => {
                     setSelectedColor(c);
-                    setSelectedImageIndex(0); 
-                  }}
+                    setSelectedImageIndex(0);                   }}
                 />
               ))}
             </div>
@@ -104,23 +102,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ products, addToCart }) 
               Add to Cart
             </button>
 
-            <button
-              className="buy-now-btn"
-              onClick={() => {
-                const productWithColor = {
-                  ...product,
-                  selectedColor: {
-                    name: selectedColor.name,
-                    hex: selectedColor.hex,
-                    image: currentImage,
-                  },
-                };
-                addToCart(productWithColor);
-                navigate('/cart'); 
-              }}
-            >
-              Buy Now
-            </button>
           </div>
         </div>
       </div>
