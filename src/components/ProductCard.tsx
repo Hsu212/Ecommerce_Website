@@ -10,7 +10,7 @@ interface ProductCardProps {
   addToCart: (product: Product) => void;
 }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
+const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const navigate = useNavigate();
   const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
 
@@ -45,7 +45,6 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
           </div>
         )}
 
-        {/* Favorite Heart */}
         <button
           className={`favorite-btn ${isFavorite(product.id) ? 'active' : ''}`}
           onClick={toggleFavorite}
@@ -59,33 +58,26 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, addToCart }) => {
         <h3>{product.name}</h3>
         <p>{product.description}</p>
         <p className="product-price">
-          {product.discountPercent ? (
-            <>
-              <span className="original-price">
-                ${product.price.toFixed(2)}
-              </span>{' '}
-              <span className="discounted-price">
-                ${(product.price * (1 - product.discountPercent / 100)).toFixed(2)}
-              </span>
-              <span className="discount-badge">
-                -{product.discountPercent}%
-              </span>
-            </>
-          ) : (
-            <>${product.price.toFixed(2)}</>
-          )}
-        </p>
+  Price:{' '}
+  {product.discountPercent ? (
+    <>
+      <span className="original-price">
+        ${product.price.toFixed(2)}
+      </span>{' '}
+      <span className="discounted-price">
+        ${(product.price * (1 - product.discountPercent / 100)).toFixed(2)}
+      </span>
+      <span className="discount-badge">
+        -{product.discountPercent}%
+      </span>
+    </>
+  ) : (
+    <>${product.price.toFixed(2)}</>
+  )}
+</p>
         <p>Category: {product.category}</p>
 
-        <button
-          className="add-to-cart-btn"
-          onClick={(e) => {
-            e.stopPropagation();
-            addToCart(product);
-          }}
-        >
-          Add to Cart
-        </button>
+        
       </div>
     </div>
   );
