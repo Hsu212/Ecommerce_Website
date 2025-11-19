@@ -13,7 +13,6 @@ const LivingRoom: React.FC<LivingRoomProps> = ({ addToCart }) => {
 
   return (
     <div className="products">
-      <h1>Living Room Products</h1>
       <div className="product-list">
         {livingRoomProducts.map((product) => (
           <ProductCard
@@ -29,3 +28,4 @@ const LivingRoom: React.FC<LivingRoomProps> = ({ addToCart }) => {
 
 
 export default LivingRoom;
+
