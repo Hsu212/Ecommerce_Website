@@ -2,9 +2,8 @@
   padding: 2rem 1rem;
   max-width: 1000px;
   margin: 0 auto;
-  background: var(--card-bg, #fff);
+  background: transparent;
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }
 
 .cart h1 {
