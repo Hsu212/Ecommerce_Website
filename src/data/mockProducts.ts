@@ -235,6 +235,61 @@ export const mockProducts: Product[] = [
       },
     ],
   },
+  {
+    id: 12,
+    name: 'OFELIA VASS Comforter set',
+    price: 79.99,
+    image: 'https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-green__1297976_pe935966_s5.jpg?f=xl',
+    description: 'A set in timeless green with a waffle structure where the comforter’s wonderfully soft cotton shell breathes and its fluffy filling feels like a soft embrace.',
+    category: 'Bedroom',
+    colors: [
+      {
+        name: 'Green',
+        hex: '#02320cff',
+        images: ['https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-green__1302522_pe938074_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-green__1302536_pe938037_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-green__1297976_pe935966_s5.jpg?f=xl'] 
+      },
+      {
+        name: 'White',
+        hex: '#FFFFFF',
+        images: ['https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-white__1302513_pe938065_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-white__1302526_pe938076_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-white__1297974_pe935964_s5.jpg?f=xl']
+      },
+    ],
+  },
+  {
+    id: 13,
+    name: 'HEDFRYLE Comforter set',
+    price: 39.99,
+    image: 'https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-pink__1299176_pe936486_s5.jpg?f=xl',
+    description: 'This set offers several color combinations, so you can easily find an expression that suits your bedroom. It also has a wonderfully soft brushed surface – and a surprisingly low price.',
+    category: 'Bedroom',
+    colors: [
+      {
+        name: 'Pink',
+        hex: '#FFC0CB',
+        images: ['https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-pink__1304054_pe938622_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-pink__1304030_pe938598_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-pink__1299176_pe936486_s5.jpg?f=xl'] 
+      },
+      {
+        name: 'Blue',
+        hex: '#081a8eff',
+        images: ['https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-blue__1302532_pe938033_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-blue__1302540_pe938041_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-blue__1298019_pe936008_s5.jpg?f=xl']
+      },
+      {
+        name: 'Green',
+        hex: '#488e47ff',
+        images: ['https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-green__1302556_pe938057_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-green__1302517_pe938069_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-green__1298016_pe936005_s5.jpg?f=xl']
+      },
+      {
+        name: 'Grey',
+        hex: '#808080',
+        images: ['https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-gray__1302550_pe938051_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-gray__1302555_pe938056_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-gray__1298024_pe936009_s5.jpg?f=xl']
+      },
+      {
+        name: 'White',
+        hex: '#ffffff',
+        images: ['https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-white-beige__1302512_pe938064_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-white-beige__1302525_pe938026_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-white-beige__1298769_pe936280_s5.jpg?f=xl']
+      },
+    ],
+  },
   /*{
     id: ,
     name: '',
