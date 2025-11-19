@@ -13,7 +13,6 @@ const Kitchen: React.FC<KitchenProps> = ({ addToCart }) => {
 
   return (
     <div className="products">
-      <h1>Kitchen Products</h1>
       <div className="product-list">
         {kitchenProducts.map((product) => (
           <ProductCard
@@ -29,3 +28,4 @@ const Kitchen: React.FC<KitchenProps> = ({ addToCart }) => {
 
 
 export default Kitchen;
+
