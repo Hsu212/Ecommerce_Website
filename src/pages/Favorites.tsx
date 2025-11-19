@@ -8,7 +8,6 @@ const Favorites: React.FC = () => {
 
   return (
     <div className="favorites">
-      <h1>My Favorites</h1>
       {favorites.length === 0 ? (
         <>
           <p className="empty-message">You haven't added any favorites yet.</p>
@@ -20,7 +19,7 @@ const Favorites: React.FC = () => {
             <ProductCard
               key={product.id}
               product={product}
-              addToCart={() => {}} // dummy – not used in favorites
+              addToCart={() => {}} 
             />
           ))}
         </div>
@@ -28,5 +27,6 @@ const Favorites: React.FC = () => {
     </div>
   );
 };
+
 
 export default Favorites;
