@@ -13,7 +13,6 @@ const Bathroom: React.FC<BathroomProps> = ({ addToCart }) => {
 
   return (
     <div className="products">
-      <h1>Bathroom Products</h1>
       <div className="product-list">
         {bathroomProducts.map((product) => (
           <ProductCard
