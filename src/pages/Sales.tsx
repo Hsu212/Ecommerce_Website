@@ -21,7 +21,6 @@ const Sales: React.FC<SalesProps> = ({ addToCart }) => {
 
   return (
     <div className="products">
-      <h1>Sales Products</h1>
       <div className="product-list">
         {salesProducts.map((product) => (
           <ProductCard
@@ -37,4 +36,5 @@ const Sales: React.FC<SalesProps> = ({ addToCart }) => {
 
 
 export default Sales;
+
 
