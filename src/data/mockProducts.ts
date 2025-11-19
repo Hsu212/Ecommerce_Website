@@ -239,7 +239,7 @@ export const mockProducts: Product[] = [
     id: 12,
     name: 'OFELIA VASS Comforter set',
     price: 79.99,
-    image: 'https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-green__1297976_pe935966_s5.jpg?f=xl',
+    image: 'https://www.ikea.com/us/en/images/products/luktvicker-comforter-set-white__1302513_pe938065_s5.jpg?f=xl',
     description: 'A set in timeless green with a waffle structure where the comforter’s wonderfully soft cotton shell breathes and its fluffy filling feels like a soft embrace.',
     category: 'Bedroom',
     colors: [
@@ -259,7 +259,7 @@ export const mockProducts: Product[] = [
     id: 13,
     name: 'HEDFRYLE Comforter set',
     price: 39.99,
-    image: 'https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-pink__1299176_pe936486_s5.jpg?f=xl',
+    image: 'https://www.ikea.com/us/en/images/products/hedfryle-comforter-set-white-beige__1302512_pe938064_s5.jpg?f=xl',
     description: 'This set offers several color combinations, so you can easily find an expression that suits your bedroom. It also has a wonderfully soft brushed surface – and a surprisingly low price.',
     category: 'Bedroom',
     colors: [
