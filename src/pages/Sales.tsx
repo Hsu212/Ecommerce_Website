@@ -14,7 +14,6 @@ const Sales: React.FC<SalesProps> = ({ addToCart }) => {
   if (salesProducts.length === 0) {
     return (
       <div className="products">
-        <h1>Sales Products</h1>
         <p>No products on sale at the moment.</p>
       </div>
     );
@@ -38,3 +37,4 @@ const Sales: React.FC<SalesProps> = ({ addToCart }) => {
 
 
 export default Sales;
+
