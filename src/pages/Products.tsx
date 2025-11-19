@@ -1,4 +1,3 @@
-// src/pages/Products.tsx
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
@@ -30,8 +29,7 @@ const Products: React.FC<ProductsProps> = ({ addToCart }) => {
 
   return (
     <div className="products">
-      <h1>{searchQuery ? `Search Results for "${searchQuery}"` : 'All Products'}</h1>
-      
+           
       {searchQuery && (
         <div className="search-header">
           <p>
@@ -61,3 +59,4 @@ const Products: React.FC<ProductsProps> = ({ addToCart }) => {
 };
 
 export default Products;
+
