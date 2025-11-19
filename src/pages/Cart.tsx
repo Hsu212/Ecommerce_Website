@@ -47,6 +47,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
       ) : (
         <div className="cart-layout">
           <div className="cart-items-section">
+            <h2>Total Items</h2>
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
                 <img
@@ -179,5 +180,6 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
 };
 
 export default Cart;
+
 
 
