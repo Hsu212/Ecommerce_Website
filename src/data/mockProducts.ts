@@ -290,6 +290,101 @@ export const mockProducts: Product[] = [
       },
     ],
   },
+  {
+    id: 14,
+    name: 'VAGSJON Bath towels',
+    price: 6.99,
+    image: 'https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-light-beige__0933953_pe792303_s5.jpg?f=xl',
+    description: 'The combination of solid terry and stripes gives you an appealing towel with great function. The solid terry is soft against your skin and the woven stripes are both absorbent and dry quickly.',
+    category: 'Bathroom',
+    colors: [
+      {
+        name: 'Light beige',
+        hex: '#EAD2A8',
+        images: ['https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-light-beige__0933953_pe792303_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-light-beige__1135788_pe879143_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-light-beige__0933955_pe792305_s5.jpg?f=xl'] 
+      },
+      {
+        name: 'Light green',
+        hex: '#94f2b0ff',
+        images: ['https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-light-green__1396506_pe967320_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-light-green__1434818_pe983977_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-light-green__1412686_pe974054_s5.jpg?f=xl']
+      },
+      {
+        name: 'Bright blue',
+        hex: '#0c60fcff',
+        images: ['https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-bright-blue__1215159_pe911877_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-bright-blue__1215152_pe911870_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-bright-blue__1215134_pe911852_s5.jpg?f=xl'] 
+      },
+      {
+        name: 'Dark grey',
+        hex: '#635d5dff',
+        images: ['https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-dark-gray__0604997_pe681580_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-dark-gray__1135791_pe879146_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-dark-gray__0887462_pe646607_s5.jpg?f=xl'] 
+      },
+      {
+        name: 'Bright pink',
+        hex: '#ed2e68ff',
+        images: ['https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-bright-pink__1215154_pe911872_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-bright-pink__1215155_pe911873_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/vagsjoen-bath-towel-bright-pink__1215137_pe911855_s5.jpg?f=xl'] 
+      },
+    ],
+  },
+  {
+    id: 15,
+    name: 'SLANHOSTMAL Bath towels',
+    price: 7.99,
+    image: 'https://www.ikea.com/us/en/images/products/slanhoestmal-bath-towel-black-light-beige-stripe__1255900_pe924773_s5.jpg?f=xl',
+    description: 'We love stripes! The iconic pattern is simple, yet bold and gives your bathroom a lift. Medium-thick (374 g/m²) SLÅNHÖSTMAL towel in 100% cotton, is absorbent and a perfect choice for an easy refresh.',
+    category: 'Bathroom',
+    colors: [
+      {
+        name: 'Black/light beige stripe',
+        hex: '#F5F5DC',
+        images: ['https://www.ikea.com/us/en/images/products/slanhoestmal-bath-towel-black-light-beige-stripe__1255900_pe924773_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/slanhoestmal-bath-towel-black-light-beige-stripe__1255898_pe924771_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/slanhoestmal-bath-towel-black-light-beige-stripe__1255924_pe924797_s5.jpg?f=xl'] 
+      },
+      {
+        name: 'Orange/pink stripe',
+        hex: '#F1C9BC',
+        images: ['https://www.ikea.com/us/en/images/products/slanhoestmal-bath-towel-orange-pink-stripe__1255891_pe924764_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/slanhoestmal-bath-towel-orange-pink-stripe__1255889_pe924762_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/slanhoestmal-bath-towel-orange-pink-stripe__1255915_pe924804_s5.jpg?f=xl']
+      },
+    ],
+  },
+  {
+    id: 16,
+    name: 'ROCKAN Bathrobe',
+    price: 39.99,
+    image: 'https://www.ikea.com/us/en/images/products/rockan-bathrobe-white__1135537_pe879096_s5.jpg?f=xl',
+    description: 'A comfy fit for those long, lazy mornings at home – with soft terry on both sides, adjustable belt loops, practical side pockets and sleeves that are easy to move around in.',
+    category: 'Bathroom',
+    colors: [
+      {
+        name: 'White',
+        hex: '#FFFFFF',
+        images: ['https://www.ikea.com/us/en/images/products/rockan-bathrobe-white__1135537_pe879096_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/rockan-bathrobe-white__0887699_pe675791_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/rockan-bathrobe-white__1135536_pe879099_s5.jpg?f=xl'] 
+      },
+      {
+        name: 'Grey',
+        hex: '#808080',
+        images: ['https://www.ikea.com/us/en/images/products/rockan-bathrobe-gray__1265427_pe927661_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/rockan-bathrobe-gray__0885588_pe675794_s5.jpg?f=xl','https://www.ikea.com/us/en/images/products/rockan-bathrobe-gray__1135533_pe879100_s5.jpg?f=xl']
+      },
+    ],
+  },
+  /*{
+    id: ,
+    name: '',
+    price: .00,
+    image: '',
+    description: '',
+    category: '',
+    colors: [
+      {
+        name: '',
+        hex: '#',
+        images: [''] 
+      },
+      {
+        name: '',
+        hex: '#',
+        images: ['']
+      },
+    ],
+  },*/
   /*{
     id: ,
     name: '',
