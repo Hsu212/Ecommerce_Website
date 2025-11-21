@@ -28,7 +28,7 @@ const Home: React.FC = () => {
   const slides = [
     { id: 1, image: 'https://www.ikea.com/global/en/images/PH_202776_a69420c69c.jpg?f=g', alt: 'Furniture Slide 1' },
     { id: 2, image: 'https://www.ikea.com/global/en/images/1_1_3d635a062f.jpg?f=g', alt: 'Furniture Slide 2' },
-    { id: 3, image: 'https://www.ikea.com/global/en/images/PH_206781_6363174477.jpg?f=xl', alt: 'Furniture Slide 3' },
+    { id: 3, image: 'https://www.ikea.com/global/en/images/Livingrrom_17_69973148cc_09409fc85c.jpg?f=xxl', alt: 'Furniture Slide 3' },
   ];
 
   const salesProducts = mockProducts.filter(p => p.discountPercent && p.discountPercent > 0);
@@ -133,3 +133,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
