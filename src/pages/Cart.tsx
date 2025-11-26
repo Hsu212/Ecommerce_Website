@@ -3,7 +3,7 @@ import { type Product } from '../types/Product';
 import '../styles/Cart.css';
 import VisaCard from '../assets/VisaCard.png';
 import MasterCard from '../assets/MasterCard.png';
-import PayPal from '../assets/Paypal.png';
+import PayPal from '../assets/PayPal.png';
 
 
 interface CartProps {
@@ -183,3 +183,4 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
 };
 
 export default Cart;
+
