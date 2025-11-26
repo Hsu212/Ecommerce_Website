@@ -186,7 +186,7 @@ const Home: React.FC = () => {
       <section className="home-sales">
         <div className="sales-header">
           <h2>Flash Sale</h2>
-          <Link to="/sales" className="view-all-link">View All</Link>
+          <Link to="/sales" className="view-all-link">View More</Link>
         </div>
 
         {salesProducts.length === 0 ? (
@@ -204,3 +204,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
