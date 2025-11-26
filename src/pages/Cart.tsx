@@ -3,7 +3,7 @@ import { type Product } from '../types/Product';
 import '../styles/Cart.css';
 import VisaCard from '../assets/VisaCard.png';
 import MasterCard from '../assets/MasterCard.png';
-import PayPal from '../assets/PayPal.png';
+import PayPal from '../assets/Paypal.png';
 
 
 interface CartProps {
@@ -46,6 +46,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
         </p>
       ) : (
         <div className="cart-layout">
+          {/* Left: Cart Items */}
           <div className="cart-items-section">
             <h2>Total Items</h2>
             {cartItems.map((item) => (
@@ -58,12 +59,9 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
                   <h3>{item.name}</h3>
                   {item.selectedColor && (
                     <p className="selected-color">
-                      Color:{' '}
-                      <span style={{ color: item.selectedColor.hex }}>
-                        {item.selectedColor.name}
-                      </span>
+                      Color: {item.selectedColor.name}
                     </p>
-                  )}
+                 )}
                   <p>Price: ${item.price.toFixed(2)}</p>
                   <button onClick={() => removeFromCart(item.id)}>
                     Remove
@@ -73,9 +71,11 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
             ))}
           </div>
 
+          {/* Right: Checkout Summary */}
           <div className="checkout-summary">
             <h2>Order Summary</h2>
 
+            {/* Address Form */}
             <div className="checkout-section">
               <h3>Shipping Address</h3>
               <input
@@ -106,6 +106,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
               </div>
             </div>
 
+            {/* Voucher */}
             <div className="checkout-section">
               <h3>Shop Voucher</h3>
               <div className="voucher-input">
@@ -127,6 +128,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
               )}
             </div>
 
+            {/* Payment Method */}
             <div className="checkout-section">
               <h3>Payment Method</h3>
               <label className="payment-option">
@@ -148,6 +150,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
               </label>
             </div>
 
+            {/* Price Breakdown */}
             <div className="price-breakdown">
               <div className="price-row">
                 <span>Subtotal ({cartItems.length} items)</span>
@@ -180,6 +183,3 @@ const Cart: React.FC<CartProps> = ({ cartItems, setCartItems }) => {
 };
 
 export default Cart;
-
-
-
