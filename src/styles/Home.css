@@ -11,8 +11,11 @@
   min-height: 100vh;
 }
 
+/* -------------------------------------------------
+   CAROUSEL
+   ------------------------------------------------- */
 .home-carousel {
-  margin-bottom: 0; 
+  margin-bottom: 0; /* removed extra gap before videos */
   position: relative;
   overflow: hidden;
   border-radius: 16px;
@@ -37,6 +40,7 @@
   transform: scale(1.03);
 }
 
+/* Carousel Text Overlay */
 .carousel-overlay {
   position: absolute;
   bottom: 0;
@@ -89,6 +93,7 @@
   transform: translateY(-2px);
 }
 
+/* INTRO ON FIRST SLIDE */
 .intro-on-clear {
   position: absolute;
   top: 4rem;
@@ -117,6 +122,9 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* -------------------------------------------------
+   IKEA-STYLE LOCAL MP4 VIDEO SECTION
+   ------------------------------------------------- */
 .home-videos {
   padding: 0;
   overflow: hidden;
@@ -174,6 +182,9 @@
   text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
+/* -------------------------------------------------
+   FLASH SALE SECTION
+   ------------------------------------------------- */
 .home-sales {
   padding: 4rem 1rem 2rem;
   max-width: 1400px;
@@ -224,6 +235,9 @@
   font-size: 1.2rem;
 }
 
+/* -------------------------------------------------
+   RESPONSIVE
+   ------------------------------------------------- */
 @media (max-width: 992px) {
   .carousel-slide { height: 450px; }
   .video-showcase { grid-template-columns: 1fr; }
@@ -246,4 +260,222 @@
   .video-item { height: 60vh; }
   .video-overlay-text { padding: 4rem 1.5rem; }
   .sales-header { flex-direction: column; gap: 0.5rem; text-align: center; }
+}
+/* -------------------------------------------------
+   NEW ARRIVALS SECTION
+   ------------------------------------------------- */
+.home-new-arrivals {
+  padding: 4rem 1rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: var(--background);
+}
+
+.new-arrivals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.new-arrivals-header h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text);
+}
+
+.new-arrivals-list {
+  display: grid;
+  grid-auto-columns: 280px;
+  grid-auto-flow: column;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0 1rem 1.5rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+}
+
+.new-arrivals-list::-webkit-scrollbar {
+  height: 8px;
+}
+
+.new-arrivals-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.new-arrivals-list::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+.new-arrivals-list > * {
+  scroll-snap-align: start;
+}
+
+/* Responsive fallback – stack on very small screens */
+@media (max-width: 640px) {
+  .new-arrivals-list {
+    grid-auto-columns: minmax(260px, 1fr);
+  }
+}
+/* ADD THIS BLOCK AT THE VERY END OF Home.css */
+.carousel-cta {
+  /* These were already defined, but we re-apply them to make sure <button> inherits everything */
+  display: inline-block !important;
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  padding: 0.9rem 2.4rem !important;
+  font-weight: 700 !important;
+  font-size: 1.1rem !important;
+  border-radius: 50px !important;
+  text-decoration: none !important;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.15), -8px -8px 16px rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.2px !important;
+  border: none !important;
+  cursor: pointer !important;
+}
+
+/* Ensure hover works exactly the same */
+.carousel-cta:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.15), inset 2px 2px 4px rgba(0,0,0,0.1) !important;
+  transform: translateY(-2px) !important;
+}
+/* NEW ARRIVALS NAVIGATION ARROWS */
+.new-arrivals-header .nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-arrow {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--text);
+  border: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  user-select: none;
+  z-index: 10;
+}
+
+.nav-arrow:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.nav-arrow:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .new-arrivals-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  .new-arrivals-header .nav-buttons {
+    order: -1;
+  }
+}
+/* ——— NEW ARRIVALS HORIZONTAL SCROLL WITH SIDE ARROWS ——— */
+.new-arrivals-wrapper {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.new-arrivals-list {
+  display: grid;
+  grid-auto-columns: 280px;
+  grid-auto-flow: column;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0 60px 1.5rem;   /* make space for arrows */
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;   /* hide scrollbar */
+}
+
+.new-arrivals-list::-webkit-scrollbar {
+  display: none;
+}
+
+.new-arrivals-list > * {
+  scroll-snap-align: start;
+}
+
+/* Floating Left & Right Arrows */
+.scroll-arrow {
+  position: absolute;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  z-index: 10;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.scroll-arrow:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.scroll-arrow.left-arrow {
+  left: 0px;
+}
+
+.scroll-arrow.right-arrow {
+  right: 0px;
+}
+
+/* Dark mode support */
+[data-theme="dark"] .scroll-arrow {
+  background: rgba(30, 30, 30, 0.95);
+  color: #fff;
+}
+
+[data-theme="dark"] .scroll-arrow:hover {
+  background: #222;
+}
+
+/* Mobile – hide arrows if touch device (optional, looks cleaner) */
+@media (max-width: 768px) {
+  .scroll-arrow {
+    display: none;
+  }
+  .new-arrivals-list {
+    padding: 0 1rem 1.5rem;
+  }
+}
+/* Hide arrows when not needed */
+.scroll-arrow.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
