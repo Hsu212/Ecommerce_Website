@@ -505,4 +505,44 @@ export const mockProducts: Product[] = [
       },
     ],
   },*/
+  /*{
+    id: ,
+    name: '',
+    price: .00,
+    image: '',
+    description: '',
+    category: '',
+    colors: [
+      {
+        name: '',
+        hex: '#',
+        images: [''] 
+      },
+      {
+        name: '',
+        hex: '#',
+        images: ['']
+      },
+    ],
+  },*/
+  /*{
+    id: ,
+    name: '',
+    price: .00,
+    image: '',
+    description: '',
+    category: '',
+    colors: [
+      {
+        name: '',
+        hex: '#',
+        images: [''] 
+      },
+      {
+        name: '',
+        hex: '#',
+        images: ['']
+      },
+    ],
+  },*/
 ];
